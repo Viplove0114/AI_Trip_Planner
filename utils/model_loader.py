@@ -48,7 +48,7 @@ def load_llm(self):
     
     elif self.model_provider == "openai":
         print("Loading LLM from OpenAI..............")
-        groq_api_key = os.getenv("OPENAI_API_KEY")
+        openai_api_key = os.getenv("OPENAI_API_KEY")
         model_name = self.config['llm']["openai"]["model_name"]
         llm= ChatOpenAI(model="o4-mini", api_key=openai_api_key)
 
